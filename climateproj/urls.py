@@ -28,14 +28,17 @@ urlpatterns = [
 '''
 
 urlpatterns = [
-	path('register/', views.registerPage, name="register"),
-	path('login/', views.loginPage, name="login"),  
-	path('logout/', views.logoutUser, name="logout"),
-    path('checklist/', views.checklist, name="checklist"),
-    path('calculate/', views.calculate, name="calculate"),
 
-    path('', views.home, name="home"),
+	url(r'register', views.registerPage, name="register"),
+	url(r'login', views.loginPage, name="login"),  
+	url(r'logout', views.logoutUser, name="logout"),
+    url(r'checklist', views.checklist, name="checklist"),
+    url(r'calculate', views.calculate, name="calculate"),
+
+    url(r'home', views.home, name="home"),
    
 
 
+
 ]
+

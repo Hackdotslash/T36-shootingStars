@@ -20,16 +20,16 @@
 			<img src="static/img/new.png" alt="">
 		</div>
 		<div class="login-content">
-            <form action="/register" method="POST">
+              <form method="POST" >
+						{% csrf_token %}
                 <!--
                 <a href="/" class="btn btn-primary mb-5">Go Back</a>
                 -->
               
                 <img src="static/img/avatar.svg" alt="">
              
-                <h2 >Calculate Carbon footprint for your team !</h2>
-                <form method="POST" action="">
-						{% csrf_token %}
+                <h3>Calculate Carbon footprint for your team !</h3>
+             
 
 
                     <div class="form-group">
@@ -40,10 +40,10 @@
 
            		   <div class="div">
               
-            <label for="projectname">Enter Project Name :</label>
+           
             <br>
             <br>
-            <input type="text" name="projectname"  id="projectname" >
+            <input type="text" name="projectname"  id="projectname" placeholder="Enter Project Name :" >
            		   </div>
                    </div>
                 </div>
@@ -60,10 +60,10 @@
                       </div>
 
             <div class="div">
-            <label for="teammnumber">Enter Number of Team Members :<br></label>
+           
             <br>
             <br>
-            <input type="text" name="teammnumber"  id="teammnumber" >
+            <input type="text" name="teammnumber"  id="teammnumber" placeholder="Number of Team-mates:" >
            		   </div>
                    </div>
                 </div>
@@ -78,32 +78,74 @@
                       </div>
 
            		   <div class="div">
-            <label for="hours">Enter Total working hours on project :</label>
+           
             <br>
             <br>
-            <input type="text" name="hours"  id="hours" >
+            <input type="text" name="hours"  id="hours" placeholder="Enter Total working hrs:" >
+           		   </div>
+                   </div>
+                </div>
+
+
+                   <div class="form-group">
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+                      </div>
+
+           		   <div class="div">
+         
+            <br>
+            <br>
+            <input type="text" name="paper"  id="paper" placeholder="Enter Printed Paper Usage:" >
            		   </div>
                    </div>
                 </div>
 
 
 
+                  <div class="form-group">
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+                      </div>
 
-              
-
-
-  
+           		   <div class="div">
+           
+            <br>
+            <br>
+            <input type="text" name="ewaste"  id="ewaste" placeholder="Enter E-waste Generation(lbs):" >
+           		   </div>
+                   </div>
+                </div>
 
         <br>
         <br>
        
-          
            
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" name="submits" id="submits" class="buttons">Calculate Teams Carbon Footprint 👣</button>
             </form>
          
         </div>
     </div>
+    <div>
+
+<h2> Here's your Teams Carbon Footprint</h2>
+
+     {% block content%}
+
+        <h2>Team Name :{{teams.teamname }} </h2>
+        <h2>Total teammates :{{total_members  }} </h2>
+        <h2>Total working hrs :{{hours  }} hrs </h2>
+        <h2>Electicity Footprint :{{calc_electricity}} kg CO2 per KWh </h2>
+        <h2>Water Footprint :{{calc_water  }} kg CO2 per liter</h2>
+        <h2>Printed Paper Footprint :{{calc_paper}} kg CO2 per sheet</h2>
+        <h2>Waste Paper Footprint :{{calc_paper_waste}} kg CO2 per kg</h2>
+        <h2>E-Waste Footprint :{{calc_paper_waste}} kg CO2 per lbs</h2>
+        <h2>Total Carbon Footprint 👣 :{{total_footprint}} kg CO2 per lbs</h2>
+ 
+     {% endblock content%}
+
 </body>
 
 </html>
