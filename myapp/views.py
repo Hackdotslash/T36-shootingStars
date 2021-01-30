@@ -74,7 +74,43 @@ def home(request):
 
 	return render(request, 'index.html', context)
 
+
+@login_required(login_url='login')
+def calculate(request):
+	teams= Team.objects.all()
+    
+	total_teams= teams.count()
+	'''
+	orders = Order.objects.all()
 	
+
+	total_orders = orders.count()
+	delivered = orders.filter(status='Delivered').count()
+	pending = orders.filter(status='Pending').count()
+    '''
+	context = { 'teams':teams,
+	'total_teams':total_teams }
+
+	return render(request, 'calculator.html', context)
+
+
+@login_required(login_url='login')
+def checklist(request):
+	teams= Team.objects.all()
+    
+	total_teams= teams.count()
+	'''
+	orders = Order.objects.all()
+	
+
+	total_orders = orders.count()
+	delivered = orders.filter(status='Delivered').count()
+	pending = orders.filter(status='Pending').count()
+    '''
+	context = { 'teams':teams,
+	'total_teams':total_teams }
+
+	return render(request, 'checklist.html', context)
 
 def logoutUser(request):
 	logout(request)

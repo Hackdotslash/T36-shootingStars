@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 {% load static %}
 
 <!DOCTYPE html>
@@ -6,7 +13,9 @@
 	<title>Climate-Impact</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-	<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 
 </head>
 <body>
@@ -18,7 +27,20 @@
 
 	{% endblock %}
     </div>
-    <iframe width="710" height="1300" frameborder="0" marginwidth="0" marginheight="0" scrolling="yes" src="https://calculator.carbonfootprint.com/calculator.aspx"></iframe>
+
+    <form method="POST" action="">
+    	{% csrf_token %}
+    <div style="border-radius:10px;border:2px solid black;width:50%;margin:15px;padding-bottom:10px;display:inline-block;">
+    <p class="text" style="font-size:30px;margin:0px;padding:15px; padding-top:20px">Used less printed papers this week !</p>
+<p class="text" style="margin:0px;padding:15px;">Learn how to use all the functions and take advantage of the provided resources.</p>
+
+
+<div class="btn-group" style="width:40%">
+<input class="btn login_btn" style="width:10%" type="submit" value="Yay ! 😃">
+<input class="btn login_btn" style="width:10%" type="submit" value="Sadly,No  ! 😓">				   			
+</div>					
+</div>
+</form>
 
 	<hr>
 	<h5>Conserve Earth , Reduce Footprint !</h5>

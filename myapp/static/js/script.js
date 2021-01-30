@@ -21,3 +21,31 @@ function switchTheme(e) {
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false);
+
+
+var closeTimeout;
+
+function openBar() {
+  clearTimeout(closeTimeout);
+  $('.emoji-bar').addClass('emoji-bar--open');
+}
+
+function closeBar() {
+  closeTimeout = setTimeout(function() {
+    $('.emoji-bar').removeClass('emoji-bar--open');
+  }, 100);
+}
+
+$('.emoji-button').mouseenter(openBar);
+$('.emoji-bar').mouseleave(closeBar);
+
+$('.emoji-button').click(function() {
+  var button = $(this);
+  button.addClass('emoji-button--selected');
+  setTimeout(function() {
+    closeBar();
+  }, 400);
+  setTimeout(function() {
+    button.removeClass('emoji-button--selected');
+  }, 600);
+});
