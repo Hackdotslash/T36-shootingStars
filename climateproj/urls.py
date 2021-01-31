@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'admin', admin.site.urls),
     url(r'dashboard', TemplateView.as_view(template_name="dashboard.html"), name='dashboard'),
     url(r'menu', TemplateView.as_view(template_name="menu.html"), name='menu'),
+    url(r'checklists', TemplateView.as_view(template_name="checklist.html"), name='checklists'),
     #url(r'result', views.calculate,name="result"),
 
 

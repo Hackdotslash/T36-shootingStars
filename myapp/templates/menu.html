@@ -7,6 +7,9 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+      <style>
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600;700&display=swap');
+</style>
    </head>
    <body>
 
@@ -15,11 +18,36 @@
 <div style="display: inline-block; float: left;">
     <br> 
     <img src="{% static 'img/avatar.svg' %}" style="width:120px;padding:15px;" align="middle" alt="Go !">
-    <p class="infotext">  🔖 Let's dive into Conserving Environment !</p>
+    <p  style="font-family: 'Comfortaa', cursive;
+     font-size:25px;
+     display:inline-block;
+     margin:0px;
+     padding:0px;
+     
+     resize: both;">  🔖 Let's dive into Conserving Environment !</p>
     <br>
     <br>
-<div class="divbox">
-<a href="{% url 'home' %}" class="infotext">Calculate Individual Carbon FootPrint </a> 
+<div class="divbox" style="border-radius: 10px;
+    border: 5px solid rgb(86, 165, 235, 0.25);
+    min-height: 200px;
+    max-height: 300px;
+    width: 252px;
+    margin: 10px;
+    display: inline-block;
+    resize: both;
+   
+    font-family: 'Comfortaa', cursive;
+    text-align:center;"
+     >
+<a href="{% url 'home' %}" class="infotext" style="font-family: 'Comfortaa', cursive;
+     font-size:22px;
+     display:inline-block;
+     margin:0px;
+     padding:0px;
+     
+     resize: both;">Calculate Individual Carbon FootPrint </a> 
+     <p class="text" style="margin:0px;padding:0px;font-size:70px;display:inline-block;"> 👣 </p>
+
 <br>
 <br>
 <!--
@@ -32,8 +60,25 @@
 -->
 </div>
 
-<div class="divbox">
-<a href="{% url 'calculate' %}" class="infotext">Calculate Team's  Carbon FootPrint  </a> 
+<div class="divbox" style="border-radius: 10px;
+    border: 5px solid rgb(86, 165, 235, 0.25);
+     min-height: 200px;
+    max-height: 300px;
+    width: 252px;
+    margin: 10px;
+    display: inline-block;
+    resize: both;
+   
+    font-family: 'Comfortaa', cursive;
+    text-align:center;">
+<a href="{% url 'calculate' %}" class="infotext" style="font-family: 'Comfortaa', cursive;
+     font-size:22px;
+     display:inline-block;
+     margin:0px;
+     padding:0px;
+     
+     resize: both;">Calculate Team's  Carbon FootPrint  </a> 
+     <p class="text" style="margin:0px;padding:0px;font-size:70px;display:inline-block;"> 👨👩 </p>
 <br>
 <br>
 <!--
@@ -46,9 +91,29 @@
 -->
 </div>
 
-    <div class="divbox">
+    <div class="divbox" style="border-radius: 10px;
+    border: 5px solid rgb(86, 165, 235, 0.25);
+    min-height: 200px;
+    max-height: 300px;
+    width: 252px;
+    margin: 10px;
+    display: inline-block;
+    resize: both;
+   
+    font-family: 'Comfortaa', cursive;
+    text-align:center;"
+     >
        
-        <a href="{% url 'checklist' %}" class="infotext">Complete Offset Checklist</a> 
+        <a href="{% url 'checklist' %}" class="infotext" style="font-family: 'Comfortaa', cursive;
+     font-size:22px;
+
+     display:inline-block;
+     margin:0px;
+     padding:0px;
+    
+     resize: both;">Complete Offset Checklist </a> 
+     <p class="text" style="margin:0px;padding:0px;font-size:70px;display:inline-block;"> ✔️ </p>
+     
         <br>
         <br>
           <!--
@@ -61,6 +126,9 @@
 -->
         </div>
 </div>
+
+
+
 
  
     <br>
