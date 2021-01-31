@@ -1,0 +1,177 @@
+
+
+
+
+
+
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Climate-Impact</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	
+	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
+</head>
+<body>
+	{%  include 'navbar.html' %}
+	<div class="container-fluid">
+	{% block content %}
+
+
+
+	{% endblock %}
+    </div>
+
+    <form method="POST" action="{% url 'dashboard' %}">
+    	{% csrf_token %}
+    	<br>
+    	<br>
+     <h3 style=" margin-left: 10px;"> 📌 Carbon Footprints Offset Checklist 😊 🔥 </h3>
+      <p class="text" style="font-size:20px;margin:0px;padding:15px; padding-top:20px"> 🔖🤩 Complete your Carbon Offset Checklist , Earn credit points 💰 and be on top of LeaderBoard 🥳 </p>
+    <div style="border-radius:10px;border:2px solid black;width:50%;margin:15px;padding-bottom:10px;display:inline-block;">
+    <p class="text" style="font-size:30px;margin:0px;padding:15px; padding-top:20px">Used less printed papers this week ?</p>
+<p class="text" style="margin:0px;padding:15px;">Green Fact 🌎 : Roughly 70 % waste from offices is paper waste , mostly the printed ones </p>
+
+
+
+<div class="btn-group" style="width:60%">
+
+<input  style="width:10%" type="radio" name="q1yes" >"Yay !😃"
+<input  style="width:10%" type="radio" name="q1no">"Sadly,No  !😓"
+
+</div>					
+</div>
+
+
+<div style="border-radius:10px;border:2px solid black;width:50%;margin:15px;padding-bottom:10px;display:inline-block;">
+    <p class="text" style="font-size:30px;margin:0px;padding:15px; padding-top:20px">Reduced average travel footprint ? </p>
+<p class="text" style="margin:0px;padding:15px;">Green Fact 🌎 : Your travel footprint is less when you travel by walking , cycles or buses</p>
+
+
+<div class="btn-group" style="width:60%">
+
+<input  style="width:10%" type="radio" name="q2yes" >"Yay !😃"
+<input  style="width:10%" type="radio" name="q2no">"Sadly,No  !😓"
+
+
+		   			
+</div>					
+</div>
+
+
+<div style="border-radius:10px;border:2px solid black;width:50%;margin:15px;padding-bottom:10px;display:inline-block;">
+    <p class="text" style="font-size:30px;margin:0px;padding:15px; padding-top:20px">Used telecommuting for meetings ? </p>
+<p class="text" style="margin:0px;padding:15px;">Green Fact 🌎 : Many offices and companys use online meetings over Skype, Zoom etc unless its urgent to be in-office</p>
+
+<div class="btn-group" style="width:60%">
+
+<input  style="width:10%" type="radio" name="q3yes" >"Yay !😃"
+<input  style="width:10%" type="radio" name="q3no">"Sadly,No  !😓"
+
+
+		   			
+</div>					
+</div>
+
+
+
+<div style="border-radius:10px;border:2px solid black;width:50%;margin:15px;padding-bottom:10px;display:inline-block;">
+    <p class="text" style="font-size:30px;margin:0px;padding:15px; padding-top:20px">Turned off ACs, Lights,Laptops when not needed ?</p>
+<p class="text" style="margin:0px;padding:15px;">Green Fact 🌎 : Desktop PCs and laptop can reduce upto 80 % of footprint if turned idle when not needed</p>
+
+
+<div class="btn-group" style="width:60%">
+
+<input  style="width:10%" type="radio" name="q4yes" >"Yay !😃"
+<input  style="width:10%" type="radio" name="q4no">"Sadly,No  !😓"
+
+
+		   			
+</div>					
+</div>
+	
+		   			
+</div>					
+</div>
+
+
+<div style="border-radius:10px;border:2px solid black;width:50%;margin:15px;padding-bottom:10px;display:inline-block;">
+    <p class="text" style="font-size:30px;margin:0px;padding:15px; padding-top:20px">Had a Vegan Monday ? </p>
+<p class="text" style="margin:0px;padding:15px;">Green Fact 🌎 : Vegetarians save 3,000 pounds of CO2 per year compared to meat-eaters</p>
+
+
+<div class="btn-group" style="width:60%">
+
+<input  style="width:10%" type="radio" name="q5yes" >"Yay !😃"
+<input  style="width:10%" type="radio" name="q5no">"Sadly,No  !😓"
+
+
+		   			
+</div>					
+</div>
+
+
+<div style="border-radius:10px;border:2px solid black;width:50%;margin:15px;padding-bottom:10px;display:inline-block;">
+    <p class="text" style="font-size:30px;margin:0px;padding:15px; padding-top:20px">Reduced average travel footprint ? </p>
+<p class="text" style="margin:0px;padding:15px;">Green Fact 🌎 : Your travel footprint is less when you travel by walking , cycles or buses</p>
+
+
+<div class="btn-group" style="width:60%">
+
+<input  style="width:10%" type="radio" name="q6yes" >"Yay !😃"
+<input  style="width:10%" type="radio" name="q6no">"Sadly,No  !😓"
+
+
+		   			
+</div>					
+</div>
+
+
+
+<div style="border-radius:10px;border:2px solid black;width:50%;margin:15px;padding-bottom:10px;display:inline-block;">
+    <p class="text" style="font-size:30px;margin:0px;padding:15px; padding-top:20px">Reduced , reused , recycled ? </p>
+<p class="text" style="margin:0px;padding:15px;">Green Fact  🌎 : The 3 R's Mantra is a key to 'Green Earth'</p>
+
+
+<div class="btn-group" style="width:60%">
+
+<input  style="width:10%" type="radio" name="q7yes" >"Yay !😃"
+<input  style="width:10%" type="radio" name="q7no">"Sadly,No  !😓"
+
+
+		   			
+</div>					
+</div>
+
+		   			
+</div>					
+</div>
+
+
+<div class="btn-group" style="width:60%">
+
+ <button type="submit" name="submitss" id="submitss" class="buttons" onclick="{% url 'dashboard' %}" >Take me to LeaderBoard 🤩 </button>
+
+
+		   			
+				
+</div>
+
+
+</form>
+
+	<hr>
+	<h5>Conserve Earth , Reduce Footprint !</h5>
+	
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
