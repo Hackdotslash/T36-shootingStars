@@ -1,151 +1,225 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html>
-    
-<head>
-	<title>Login</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-
-	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-
-
-	
-</head>
-<body>
-	<div class="container">
-		<div class="img">
-			<img src="static/img/new.png" alt="">
-		</div>
-		<div class="login-content">
-              <form method="POST" >
-						{% csrf_token %}
-                <!--
-                <a href="/" class="btn btn-primary mb-5">Go Back</a>
-                -->
-              
-                <img src="static/img/avatar.svg" alt="">
-             
-                <h3>Calculate Carbon footprint for your team !</h3>
-             
-
-
-                    <div class="form-group">
-           		<div class="input-div one">
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-                      </div>
-
-           		   <div class="div">
-              
-           
-            <br>
-            <br>
-            <input type="text" name="projectname"  id="projectname" placeholder="Enter Project Name :" >
-           		   </div>
-                   </div>
-                </div>
-
-
-
-
-
-
-                <div class="form-group">
-           		<div class="input-div one">
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-                      </div>
-
-            <div class="div">
-           
-            <br>
-            <br>
-            <input type="text" name="teammnumber"  id="teammnumber" placeholder="Number of Team-mates:" >
-           		   </div>
-                   </div>
-                </div>
-
-
-
-
-                  <div class="form-group">
-           		<div class="input-div one">
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-                      </div>
-
-           		   <div class="div">
-           
-            <br>
-            <br>
-            <input type="text" name="hours"  id="hours" placeholder="Enter Total working hrs:" >
-           		   </div>
-                   </div>
-                </div>
-
-
-                   <div class="form-group">
-           		<div class="input-div one">
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-                      </div>
-
-           		   <div class="div">
-         
-            <br>
-            <br>
-            <input type="text" name="paper"  id="paper" placeholder="Enter Printed Paper Usage:" >
-           		   </div>
-                   </div>
-                </div>
-
-
-
-                  <div class="form-group">
-           		<div class="input-div one">
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-                      </div>
-
-           		   <div class="div">
-           
-            <br>
-            <br>
-            <input type="text" name="ewaste"  id="ewaste" placeholder="Enter E-waste Generation(lbs):" >
-           		   </div>
-                   </div>
-                </div>
-
-        <br>
-        <br>
-       
-           
-            <button type="submit" name="submits" id="submits" class="buttons">Calculate Teams Carbon Footprint 👣</button>
+   <head>
+      <title>Calculate</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+   </head>
+   <body>
+      <div class="container">
+         <div class="img">
+            <img src="{% static 'img/green.svg' %}" alt="">
+         </div>
+         <div class="login-content">
+            <form method="POST"  >
+               {% csrf_token %}
+               <!--
+                  <a href="/" class="btn btn-primary mb-5">Go Back</a>
+                  -->
+               <img src="{% static 'img/avatar.svg' %}" alt="">
+               <h3>Calculate Weekly Carbon footprint for your team !</h3>
+               <div class="form-group">
+                  <div class="input-div one">
+                     <div class="i">
+                        <i class="fas fa-user"></i>
+                     </div>
+                     <div class="div">
+                        <br>
+                        <br>
+                        <input type="text" name="projectname"  id="projectname" placeholder="Enter Project Name :" >
+                     </div>
+                  </div>
+               </div>
+               <div class="form-group">
+                  <div class="input-div one">
+                     <div class="i">
+                        <i class="fas fa-user-friends"></i>
+                     </div>
+                     <div class="div">
+                        <br>
+                        <br>
+                        <input type="text" name="teammnumber"  id="teammnumber" placeholder="Number of Team-mates:" >
+                     </div>
+                  </div>
+               </div>
+               <div class="form-group">
+                  <div class="input-div one">
+                     <div class="i">
+                        <i class="fas fa-clock"></i>
+                     </div>
+                     <div class="div">
+                        <br>
+                        <br>
+                        <input type="text" name="hours"  id="hours" placeholder="Enter Total working hrs:" >
+                     </div>
+                  </div>
+               </div>
+               <div class="form-group">
+                  <div class="input-div one">
+                     <div class="i">
+                        <i class="fas fa-paper-plane" ></i>
+                     </div>
+                     <div class="div">
+                        <br>
+                        <br>
+                        <input type="text" name="paper"  id="paper" placeholder="Enter Printed Paper Usage:" >
+                     </div>
+                  </div>
+               </div>
+               <div class="form-group">
+                  <div class="input-div one">
+                     <div class="i">
+                        <i class="fas fa-trash-alt"></i>
+                     </div>
+                     <div class="div">
+                        <br>
+                        <br>
+                        <input type="text" name="ewaste"  id="ewaste" placeholder="Enter E-waste Generation(lbs):" >
+                     </div>
+                  </div>
+               </div>
+               <div class="form-group">
+                  <div class="input-div one">
+                     <div class="i">
+                        <i class="fas fa-plane"></i>
+                     </div>
+                     <div class="div">
+                        <br>
+                        <br>
+                        <input type="text" name="flight"  id="flight" placeholder="Enter average travel by flight (in miles)" >
+                     </div>
+                  </div>
+               </div>
+               <div class="form-group">
+                  <div class="input-div one">
+                     <div class="i">
+                        <i class="fas fa-bus"></i>
+                     </div>
+                     <div class="div">
+                        <br>
+                        <br>
+                        <input type="text" name="bus"  id="bus" placeholder="Enter average travel by bus (in miles)" >
+                     </div>
+                  </div>
+               </div>
+               <div class="form-group">
+                  <div class="input-div one">
+                     <div class="i">
+                        <i class="fas fa-car"></i>
+                     </div>
+                     <div class="div">
+                        <br>
+                        <br>
+                        <input type="text" name="car"  id="car" placeholder="Enter average travel by car (in miles)" >
+                     </div>
+                  </div>
+               </div>
+               <div class="form-group">
+                  <div class="input-div one">
+                     <div class="i">
+                        <i class="fas fa-train"></i>
+                     </div>
+                     <div class="div">
+                        <br>
+                        <br>
+                        <input type="text" name="train"  id="train" placeholder="Enter average travel by train (in miles)" >
+                     </div>
+                  </div>
+               </div>
+               <br>
+               <br>
+               <button type="submit" name="submits" id="submits" class="buttons" >Calculate Teams Carbon Footprint 👣</button>
             </form>
-         
-        </div>
-    </div>
-    <div>
-
-<h2> Here's your Teams Carbon Footprint</h2>
-
-     {% block content%}
-
-        <h2>Team Name :{{teams.teamname }} </h2>
-        <h2>Total teammates :{{total_members  }} </h2>
-        <h2>Total working hrs :{{hours  }} hrs </h2>
-        <h2>Electicity Footprint :{{calc_electricity}} kg CO2 per KWh </h2>
-        <h2>Water Footprint :{{calc_water  }} kg CO2 per liter</h2>
-        <h2>Printed Paper Footprint :{{calc_paper}} kg CO2 per sheet</h2>
-        <h2>Waste Paper Footprint :{{calc_paper_waste}} kg CO2 per kg</h2>
-        <h2>E-Waste Footprint :{{calc_paper_waste}} kg CO2 per lbs</h2>
-        <h2>Total Carbon Footprint 👣 :{{total_footprint}} kg CO2 per lbs</h2>
- 
-     {% endblock content%}
-
-</body>
-
+         </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div id="result"  >
+         <h3  style="text-align:center"> Here's your Teams Weekly Carbon Footprint</h3>
+         {% block content%}
+         <table>
+            <thead>
+               <tr>
+                  <th>Parameter</th>
+                  <th>Carbon Footprint</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td data-column="Parameter">Team Name</td>
+                  <td data-column="Carbon Footprint">{{request.user}}</td>
+               </tr>
+               <tr>
+                  <td data-column="Parameter">Total teammates </td>
+                  <td data-column="Carbon Footprint">{{total_members  }}  </td>
+               </tr>
+               <tr>
+                  <td data-column="Parameter">Total working hrs</td>
+                  <td data-column="Carbon Footprint">{{hours  }} hrs</td>
+               </tr>
+               <tr>
+                  <td data-column="Parameter">Electricity Footprint</td>
+                  <td data-column="Carbon Footprint">{{calc_electricity}} kg CO2 per KWh</td>
+               </tr>
+               <tr>
+                  <td data-column="Parameter">Water Footprint</td>
+                  <td data-column="Carbon Footprint">{{calc_water  }} kg CO2 per liter</td>
+               </tr>
+               <tr>
+                  <td data-column="Parameter">Printed Paper Footprint</td>
+                  <td data-column="Carbon Footprint">{{calc_paper}} kg CO2 per sheet</td>
+               </tr>
+               <tr>
+                  <td data-column="Parameter">Waste Paper Footprint</td>
+                  <td data-column="Carbon Footprint">{{calc_paper_waste}} kg CO2 per kg</td>
+               </tr>
+               <tr>
+                  <td data-column="Parameter">E-Waste Footprint</td>
+                  <td data-column="Carbon Footprint">{{calc_paper_waste}} kg CO2 per lbs</td>
+               </tr>
+               <tr>
+                  <td data-column="Parameter">Bus Footprint </td>
+                  <td data-column="Carbon Footprint">{{bus_footprint}} kg CO2 per miles</td>
+               </tr>
+               <tr>
+                  <td data-column="Parameter">Car Footprint</td>
+                  <td data-column="Carbon Footprint">{{car_footprint}} kg CO2 per miles</td>
+               </tr>
+               <tr>
+                  <td data-column="Parameter">Train Footprint</td>
+                  <td data-column="Carbon Footprint">{{train_footprint}} kg CO2 per miles</td>
+               </tr>
+               <tr>
+                  <td data-column="Parameter">Flight Footprint</td>
+                  <td data-column="Carbon Footprint">{{flight_footprint}} kg CO2 per miles</td>
+               </tr>
+               <tr>
+                  <td data-column="Parameter">Total Carbon Footprint 👣</td>
+                  <td data-column="Carbon Footprint">{{total_footprint}} kg CO2</td>
+               </tr>
+            </tbody>
+         </table>
+         {% endblock content%}
+      </div>
+   </body>
 </html>

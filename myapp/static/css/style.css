@@ -80,9 +80,6 @@ h1{
    overflow: scroll;
 }
 
-form{
-  width: 360px;
-}
 
 button
 {
@@ -248,9 +245,12 @@ input:checked + .slider:before {
 
 
 .container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+  width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap :7rem;
+    padding: 0 2rem;
 }
 
 .img{
@@ -272,9 +272,7 @@ input:checked + .slider:before {
   width: 500px;
 }
 
-form{
-  width: 360px;
-}
+
 
 .login-content img{
     height: 100px;
@@ -301,7 +299,7 @@ form{
 }
 
 .i{
-  color: #d9d9d9;
+  color: #1B1E23;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -374,4 +372,81 @@ form{
 
 .input-div.pass{
   margin-bottom: 4px;
+}
+
+table { 
+  width: 750px; 
+  border-collapse: collapse; 
+  margin:50px auto;
+  }
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+  }
+
+th { 
+  background:#6F1E51; 
+  color: white; 
+  font-weight: bold; 
+  }
+
+td, th { 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+  font-size: 18px;
+  }
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+  table { 
+      width: 100%; 
+  }
+
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr { 
+    display: block; 
+  }
+  
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  tr { border: 1px solid #ccc; }
+  
+  td { 
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 50%; 
+  }
+
+  td:before { 
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+    /* Label the data */
+    content: attr(data-column);
+
+    color: #000;
+    font-weight: bold;
+  }
+
 }
