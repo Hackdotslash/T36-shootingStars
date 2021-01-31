@@ -30,11 +30,15 @@ urlpatterns = [
     url(r'dashboard', TemplateView.as_view(template_name="dashboard.html"), name='dashboard'),
     url(r'menu', TemplateView.as_view(template_name="menu.html"), name='menu'),
     url(r'checklists', TemplateView.as_view(template_name="checklist.html"), name='checklists'),
+     url(r'checklists', TemplateView.as_view(template_name="checklist.html"), name='checklists'),
+    url(r'index', TemplateView.as_view(template_name="index.html"), name='index'),
+    url(r'main', TemplateView.as_view(template_name="home.html"), name='home'),
     #url(r'result', views.calculate,name="result"),
 
 
-
+    
     url(r'home', views.home, name="home"),
+    url(r'main', views.main, name="main"),
    
 
 

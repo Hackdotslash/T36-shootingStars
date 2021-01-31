@@ -58,6 +58,13 @@ def loginPage(request):
         return render(request, 'login.html', context)
 
 
+def main(request):
+ 
+
+    return render(request, 'home.html')
+
+
+
 
 @login_required(login_url='login')
 def home(request):
@@ -76,6 +83,7 @@ def home(request):
     'total_teams':total_teams }
 
     return render(request, 'index.html', context)
+
 
 
 @login_required(login_url='login')
