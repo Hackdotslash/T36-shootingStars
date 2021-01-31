@@ -28,18 +28,142 @@
 	{% endblock %}
     </div>
 
-    <form method="POST" action="">
+    <form method="POST" action="{% url 'dashboard' %}">
     	{% csrf_token %}
+    	<br>
+    	<br>
+     <h3 style=" margin-left: 10px;"> 📌 Carbon Footprints Offset Checklist 😊 🔥 </h3>
+      <p class="text" style="font-size:20px;margin:0px;padding:15px; padding-top:20px"> 🔖🤩 Complete your Carbon Offset Checklist , Earn credit points 💰 and be on top of LeaderBoard 🥳 </p>
     <div style="border-radius:10px;border:2px solid black;width:50%;margin:15px;padding-bottom:10px;display:inline-block;">
-    <p class="text" style="font-size:30px;margin:0px;padding:15px; padding-top:20px">Used less printed papers this week !</p>
-<p class="text" style="margin:0px;padding:15px;">Learn how to use all the functions and take advantage of the provided resources.</p>
+    <p class="text" style="font-size:30px;margin:0px;padding:15px; padding-top:20px">Used less printed papers this week ?</p>
+<p class="text" style="margin:0px;padding:15px;">Green Fact 🌎 : Roughly 70 % waste from offices is paper waste , mostly the printed ones </p>
 
 
-<div class="btn-group" style="width:40%">
-<input class="btn login_btn" style="width:10%" type="submit" value="Yay ! 😃">
-<input class="btn login_btn" style="width:10%" type="submit" value="Sadly,No  ! 😓">				   			
+
+<div class="btn-group" style="width:60%">
+
+<input  style="width:10%" type="radio" name="q1yes" >"Yay !😃"
+<input  style="width:10%" type="radio" name="q1no">"Sadly,No  !😓"
+
 </div>					
 </div>
+
+
+<div style="border-radius:10px;border:2px solid black;width:50%;margin:15px;padding-bottom:10px;display:inline-block;">
+    <p class="text" style="font-size:30px;margin:0px;padding:15px; padding-top:20px">Reduced average travel footprint ? </p>
+<p class="text" style="margin:0px;padding:15px;">Green Fact 🌎 : Your travel footprint is less when you travel by walking , cycles or buses</p>
+
+
+<div class="btn-group" style="width:60%">
+
+<input  style="width:10%" type="radio" name="q2yes" >"Yay !😃"
+<input  style="width:10%" type="radio" name="q2no">"Sadly,No  !😓"
+
+
+		   			
+</div>					
+</div>
+
+
+<div style="border-radius:10px;border:2px solid black;width:50%;margin:15px;padding-bottom:10px;display:inline-block;">
+    <p class="text" style="font-size:30px;margin:0px;padding:15px; padding-top:20px">Used telecommuting for meetings ? </p>
+<p class="text" style="margin:0px;padding:15px;">Green Fact 🌎 : Many offices and companys use online meetings over Skype, Zoom etc unless its urgent to be in-office</p>
+
+<div class="btn-group" style="width:60%">
+
+<input  style="width:10%" type="radio" name="q3yes" >"Yay !😃"
+<input  style="width:10%" type="radio" name="q3no">"Sadly,No  !😓"
+
+
+		   			
+</div>					
+</div>
+
+
+
+<div style="border-radius:10px;border:2px solid black;width:50%;margin:15px;padding-bottom:10px;display:inline-block;">
+    <p class="text" style="font-size:30px;margin:0px;padding:15px; padding-top:20px">Turned off ACs, Lights,Laptops when not needed ?</p>
+<p class="text" style="margin:0px;padding:15px;">Green Fact 🌎 : Desktop PCs and laptop can reduce upto 80 % of footprint if turned idle when not needed</p>
+
+
+<div class="btn-group" style="width:60%">
+
+<input  style="width:10%" type="radio" name="q4yes" >"Yay !😃"
+<input  style="width:10%" type="radio" name="q4no">"Sadly,No  !😓"
+
+
+		   			
+</div>					
+</div>
+	
+		   			
+</div>					
+</div>
+
+
+<div style="border-radius:10px;border:2px solid black;width:50%;margin:15px;padding-bottom:10px;display:inline-block;">
+    <p class="text" style="font-size:30px;margin:0px;padding:15px; padding-top:20px">Had a Vegan Monday ? </p>
+<p class="text" style="margin:0px;padding:15px;">Green Fact 🌎 : Vegetarians save 3,000 pounds of CO2 per year compared to meat-eaters</p>
+
+
+<div class="btn-group" style="width:60%">
+
+<input  style="width:10%" type="radio" name="q5yes" >"Yay !😃"
+<input  style="width:10%" type="radio" name="q5no">"Sadly,No  !😓"
+
+
+		   			
+</div>					
+</div>
+
+
+<div style="border-radius:10px;border:2px solid black;width:50%;margin:15px;padding-bottom:10px;display:inline-block;">
+    <p class="text" style="font-size:30px;margin:0px;padding:15px; padding-top:20px">Reduced average travel footprint ? </p>
+<p class="text" style="margin:0px;padding:15px;">Green Fact 🌎 : Your travel footprint is less when you travel by walking , cycles or buses</p>
+
+
+<div class="btn-group" style="width:60%">
+
+<input  style="width:10%" type="radio" name="q6yes" >"Yay !😃"
+<input  style="width:10%" type="radio" name="q6no">"Sadly,No  !😓"
+
+
+		   			
+</div>					
+</div>
+
+
+
+<div style="border-radius:10px;border:2px solid black;width:50%;margin:15px;padding-bottom:10px;display:inline-block;">
+    <p class="text" style="font-size:30px;margin:0px;padding:15px; padding-top:20px">Reduced , reused , recycled ? </p>
+<p class="text" style="margin:0px;padding:15px;">Green Fact  🌎 : The 3 R's Mantra is a key to 'Green Earth'</p>
+
+
+<div class="btn-group" style="width:60%">
+
+<input  style="width:10%" type="radio" name="q7yes" >"Yay !😃"
+<input  style="width:10%" type="radio" name="q7no">"Sadly,No  !😓"
+
+
+		   			
+</div>					
+</div>
+
+		   			
+</div>					
+</div>
+
+
+<div class="btn-group" style="width:60%">
+
+ <button type="submit" name="submitss" id="submitss" class="buttons" onclick="{% url 'dashboard' %}" >Take me to LeaderBoard 🤩 </button>
+
+
+		   			
+				
+</div>
+
+
 </form>
 
 	<hr>

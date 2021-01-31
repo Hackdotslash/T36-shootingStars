@@ -24,7 +24,11 @@ urlpatterns = [
 	url(r'logout', views.logoutUser, name="logout"),
     url(r'checklist', views.checklist, name="checklist"),
     url(r'calculate', views.calculate, name="calculate"),
+    url(r'dashboard', views.dashboard, name="dashboard"),
+
+    url(r'admin', admin.site.urls),
     url(r'dashboard', TemplateView.as_view(template_name="dashboard.html"), name='dashboard'),
+    url(r'menu', TemplateView.as_view(template_name="menu.html"), name='menu'),
     #url(r'result', views.calculate,name="result"),
 
 

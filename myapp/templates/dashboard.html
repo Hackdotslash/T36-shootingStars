@@ -6,26 +6,77 @@
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
    </head>
+   {%  include 'navbar.html' %}
+<br>
+    <br>
+
+<br>
+    <br>
+
+<div class="div " style=" float: center"  >
+    <br>
+    <br>
+
+         <h3  style="text-align:center">Current LeaderBoard</h3>
+   <br>
+    <br>
+         <table>
+            <thead>
+               <tr>
+                  <th>Team</th>
+                  <th>Carbon Footprint</th>
+                  <th>Offset Checklist Score</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td data-column="Team">Team IT </td>
+                  <td data-column="Carbon Footprint">319 kg CO2</td>
+                  <td data-column="Offset Checklist Score">80</td>
+               </tr>
+               <tr>
+                 <td data-column="Team">Team Green Warmth</td>
+                  <td data-column="Carbon Footprint">400 kg Co2</td>
+                  <td data-column="Offset Checklist Score">60</td>
+               </tr>
+               <tr>
+                  <td data-column="Team">Team IT</td>
+                  <td data-column="Carbon Footprint">412 kg Co2</td>
+                  <td data-column="Offset Checklist Score">50</td>
+               </tr>
+               <tr>
+                    <tr>
+                  <td data-column="Team">Environment Gurus</td>
+                  <td data-column="Carbon Footprint">420 kg Co2</td>
+                  <td data-column="Offset Checklist Score">40</td>
+               </tr>
+               </tr>
+               <tr>
+
+
+    </div>
+
+
 <div style=" float: right">
    
         <div class="div">
-            <br>
-            <h5 id="username">👏 Team {{request.user}}</h5>
+        
+            <h3 id="username">👏 Team {{request.user}}</h3>
   
         </div>
         <br/>
         <br/>
       
-        <div style="border-radius: 30px;width:300px;padding:15px;border:5px solid  rgb(86, 165, 235, 0.25);margin:15px;margin-bottom:500px;overflow:auto;">
+        <div style="border-radius: 30px;width:360px;padding:15px;border:5px solid  rgb(86, 165, 235, 0.25);margin:15px;margin-bottom:500px;overflow:auto;">
         <p class="text" style="margin:0px;padding:0px;font-size:25px;"> Total Points  </p>
             
         <img src="/static/img/coin.gif" alt="Points" width="75" style="padding-right:5px;" ></img>
-        <p class="text" style="margin:0px;padding-left:20px;font-size:70px;display:inline-block;color:orange;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 10 </font></font></p>
+        <p class="text" style="margin:0px;padding-left:20px;font-size:70px;display:inline-block;color:orange;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 80 </font></font></p>
         <br>
     
     <p class="text" style="margin:10px;margin-bottom:0px;padding:0px;font-size:25px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">This Week's Carbon Footprint </font></font></p>
     <p class="text" style="margin:0px;padding:0px;font-size:70px;display:inline-block;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">👣</font></font></p>
-    <p class="text" style="margin:0px;padding-left:20px;font-size:70px;display:inline-block;color:orange;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 10 </font></font></p>
+    <p class="text" style="margin:0px;padding-left:20px;font-size:50px;display:inline-block;color:orange;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">   319 kg </font></font></p>
     
  
    

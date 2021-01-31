@@ -450,3 +450,54 @@ only screen and (max-width: 760px),
   }
 
 }
+
+.infotext{
+   /* font-family: 'Kalam', sans-serif;*/
+    font-family: 'Comfortaa', sans-serif;
+    font-size:32px;
+    display:inline-block;
+    margin:0px;
+    padding:0px;
+    color: var(--font-color);
+    resize: both;
+    
+}
+
+.infotext2{
+    /* font-family: 'Kalam', sans-serif;*/
+     font-family: 'Comfortaa', sans-serif;
+     font-size:20px;
+     display:inline-block;
+     margin:0px;
+     padding:0px;
+     color: var(--font-color);
+     resize: both;
+     
+ }
+
+.paratext{
+   /* font-family: 'Comfortaa', sans-serif;
+    font-family: 'Milonga',sans-serif;;*/
+    font-family: 'Lora', serif;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size:20px;
+    color: var(--text-col);
+    text-decoration: none;
+
+}
+
+
+.divbox {
+    border-radius: 10px;
+    border: 5px solid rgb(86, 165, 235, 0.25);
+    min-height: 280px;
+    max-height: 320px;
+    width: 252px;
+    margin: 10px;
+    display: inline-block;
+    resize: both;
+   
+    font-family: 'Comfortaa';
+    text-align:center;
+}

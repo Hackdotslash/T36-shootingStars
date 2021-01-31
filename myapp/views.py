@@ -6,6 +6,7 @@ from django.http import HttpResponse
 from django.forms import inlineformset_factory
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render
+from django.views.generic import TemplateView
 
 import requests
 from django.contrib.auth import authenticate, login, logout
@@ -49,7 +50,7 @@ def loginPage(request):
 
             if user is not None:
                 login(request, user)
-                return redirect('home')
+                return redirect('menu')
             else:
                 messages.info(request, 'Username OR password is incorrect')
 
@@ -152,13 +153,32 @@ def calculate(request):
     #get_db_footprint['teamfootprint']=total_footprint
     #get_db_footprint.save()
     #print(get_db_footprint)
+    #db_profile = Team.objects.filter(teamname=request.user)
+    #print(db_profile.teamname)
+    #db_footprint = Team(teamname=request.user)
+
+    #db_footprint.save()
     
    
     print(context)
     return render(request, 'calculator.html', context)
 
-        
+class UsersView(TemplateView):
+    template_name = 'dashboard.html'
+'''
+def get_dashboard(request):
+    if request.method == 'POST':
+        top_scores = (Team.objects.order_by('-teamscore')
+                         .values_list('teamscore', flat=True)
+                         .distinct())
+        top_records = (Team.objects
+                          .order_by('-teamscore')
+                          .filter(score__in=top_scores[:2]))
+        print(top_scores)
+        print(top_records)
 
+        return render(request, 'dashboard.html', top_records)
+'''
 @login_required(login_url='login')
 def checklist(request):
     teams= Team.objects.all()
@@ -176,6 +196,26 @@ def checklist(request):
     'total_teams':total_teams }
 
     return render(request, 'checklist.html', context)
+
+@login_required(login_url='login')
+def dashboard(request):
+    if request.method == 'POST':
+        teams= Team.objects.all()
+        
+        total_teams= teams.count()
+        '''
+        orders = Order.objects.all()
+        
+
+        total_orders = orders.count()
+        delivered = orders.filter(status='Delivered').count()
+        pending = orders.filter(status='Pending').count()
+        '''
+        context = { 'teams':teams,
+        'total_teams':total_teams }
+
+        return render(request, 'dashboard.html', context)
+
 
 def logoutUser(request):
     logout(request)
